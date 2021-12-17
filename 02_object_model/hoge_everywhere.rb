@@ -6,3 +6,11 @@
 # - Class
 # - Hash
 # - TrueClass
+
+module HogeEverywhere
+  def hoge
+    'hoge'
+  end
+end
+
+[String, Integer, Numeric, Class, Hash, TrueClass].each{|c| c.prepend(HogeEverywhere)}
